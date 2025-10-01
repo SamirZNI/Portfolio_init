@@ -10,21 +10,58 @@
         <header>
             <img src="Asset/PP.jpg" alt="Photo de profil" width="1500" height="710">
             <h1>Bienvenue dans mon univers ! </h1>
-                <p>Je m'appelle Samir ZIANI, je suis étudiant en BTS SIO (Services Informatiques aux Organisations) à l'école IFIDE Sup-Formation à Strasbourg. Passionné par le développement web et la gestion de projets informatiques, je suis constamment à la recherche de nouvelles opportunités pour apprendre et évoluer dans le domaine de l'informatique.</p>
             <nav>
                 <ul>
-                    <li><a href="#competences">Compétences</a></li>
-                    <li><a href="#formations">Formations</a></li>
+                    <li><a href="#apropos">À propos de moi</a></li>
+                    <li><a href="#realisations">Réalisations</a></li>
+                    <li><a href="#soft skills">Soft Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
-        <section id="competences">
-            <h2>Compétences</h2>
-            <p>HTML, CSS, JavaScript, Python, SQL</p>
-        </section>
-        <section id="formations">
-            <h2>Formations</h2>
-            <p>Licence en économie et Gestion, Strasbourg</p>
+            <section id="apropos">
+                <h2>À propos de moi</h2>
+                    <p>Je m'appelle Samir ZIANI, issu d'une formation initiale en économie gestion, je suis actuellement en reconversion profesionnelle dans l'informatique, étudiant en BTS SIO (Services Informatiques aux Organisations) à l'école IFIDE Sup-Formation à Strasbourg. Passionné par le développement web et la gestion de projets informatiques, je suis constamment à la recherche de nouvelles opportunités pour apprendre et évoluer dans le domaine de l'informatique.</p>
+            </section>
+            <section id="soft skills">
+                <h2>Soft Skills</h2>
+                <ul>
+                    <li>Langages de programmation : HTML, CSS, JavaScript, Python</li>
+                    <li>Gestion de bases de données : MySQL, SQLite</li>
+                    <li>Outils de développement : Git, Visual Studio Code</li>
+                    <li>Compétences en gestion de projet et travail en équipe</li>
+                </ul>
+            </section>
+            <section id="realisations">
+                <h2>Réalisations</h2>
+                    <p>Création de site internet en 2018 pour une PME</p>
+                    <p>Projet de création de tapis de jeu de cartes (TCG) en 2022, principalement Magic the Gathering</p>
+            </section>
+            <section id="contact">
+            <h2>Contact</h2>
+                <p>Vous pouvez me contacter ou consulter mes profils :</p>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/samir-ziani-2ab651154/" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://github.com/SamirZNI" target="_blank">GitHub</a></li>
+                    </ul>
+                  <p>Vous pouvez m'envoyer un message directement via ce formulaire :</p>
+                <form action="mailto:samir.zn7@gmail.com" method="post" enctype="text/plain">
+                <!-- Nom -->
+                    <label for="name">Nom :</label><br>
+                    <input type="text" id="name" name="name" placeholder="Votre nom" required><br><br>
+
+                <!-- Email -->
+                    <label for="email">Email :</label><br>
+                    <input type="email" id="email" name="email" placeholder="Votre email" required><br><br>
+
+                <!-- Message -->
+                    <label for="message">Message :</label><br>
+                    <textarea id="message" name="message" rows="8" placeholder="Écrivez votre message ici..." required></textarea><br><br>
+
+                <!-- Bouton envoyer -->
+                    <input type="submit" value="Envoyer">
+                    <input type="reset" value="Effacer">
+                </form>
         </section>
         <footer>
         </footer>
