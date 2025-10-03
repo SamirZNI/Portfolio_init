@@ -4,3 +4,38 @@ body {
     padding: 0;
     background-color: #b65252;
 }
+header {
+    background-color: #333;
+    color: white;
+    padding: 8px 0;
+    text-align: left;
+}
+nav {
+    background-color: #051b7e;
+    margin: 10px 0;
+    text-align: left;
+}
+nav a {
+    color: rgb(0, 180, 165);
+    margin: 0 15px;
+    text-decoration: none;
+}
+#apropos {
+    background-color: #810b91;
+    padding: 20px;
+}
+#softskills {
+    background-color: #ffffff;
+    color: rgb(230, 11, 11);
+    padding: 20px;
+}
+#realisations {
+    background-color: #f4f4f4a1;
+    color: #a54a4a;
+    padding: 20px;
+}
+#contact {
+    background-color: #f0ff2350;
+    color: white;
+    padding: 20px;
+}
