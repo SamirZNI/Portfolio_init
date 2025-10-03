@@ -10,12 +10,28 @@ header {
     padding: 8px 0;
     text-align: left;
 }
+header h1 {
+    margin: 0;
+    padding-left: 20px;
+    text-align: center;
+}
+header img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 15%;
+    width: 620px;
+    height: 350px;
+    padding: 20px;
+}
 nav {
+    list-style: none;
+    display: block;
     background-color: #051b7e;
     margin: 10px 0;
-    text-align: left;
+    text-align: center;
 }
 nav a {
+    display block;
     color: rgb(0, 180, 165);
     margin: 0 15px;
     text-decoration: none;
@@ -23,19 +39,54 @@ nav a {
 #apropos {
     background-color: #810b91;
     padding: 20px;
+    text-align: center;
 }
 #softskills {
     background-color: #ffffff;
     color: rgb(230, 11, 11);
     padding: 20px;
+    text-align: center;
+}
+#softskills ul {
+    list-style: none;
+    text-align: center;          
+    list-style-position: inside; 
+}
+#technologies {
+    background-color: #87ceeb;
+    color: #00008b;
+    padding: 20px;
+    text-align: center;
+}
+#technologies ul {
+    list-style: none;     
+    padding: 0;           
+    text-align: center;   
 }
 #realisations {
     background-color: #f4f4f4a1;
     color: #a54a4a;
     padding: 20px;
+    text-align: center;
 }
 #contact {
     background-color: #f0ff2350;
     color: white;
     padding: 20px;
+    text-align: center;
+}
+#contact form {
+    display: inline-block;
+    text-align: left;
+}
+#contact ul {
+  list-style: none;     
+  padding: 0;           
+  text-align: center;   
+}
+h1 {
+    color: #00ac42;
+}
+h2 {
+    color: #039cb1;=0   
 }
