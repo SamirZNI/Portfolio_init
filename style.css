@@ -18,7 +18,7 @@ header h1 {
 header img {
     display: block;
     margin: 0 auto;
-    border-radius: 15%;
+    border-radius: 20%;
     width: 620px;
     height: 350px;
     padding: 20px;
@@ -31,13 +31,19 @@ nav {
     text-align: center;
 }
 nav a {
-    display block;
-    color: rgb(0, 180, 165);
+    display : block;
+    color: rgb(255, 255, 255);
     margin: 0 15px;
     text-decoration: none;
 }
+nav li {
+    display: inline-block;
+    margin: 0 15px;
+}
 #apropos {
     background-color: #810b91;
+    color: #ffffff;
+    font-size: 18px;
     padding: 20px;
     text-align: center;
 }
@@ -88,5 +94,5 @@ h1 {
     color: #00ac42;
 }
 h2 {
-    color: #039cb1;=0   
+    color: #000000;   
 }
