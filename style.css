@@ -1,57 +1,98 @@
 body {
+    background-image: url(Asset/background3.jpg);
+    background-size: cover;
+    background-attachment: fixed;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #b65252;
-}
-header {
-    background-color: #333;
-    color: white;
-    padding: 8px 0;
-    text-align: left;
-}
-header h1 {
-    margin: 0;
-    padding-left: 20px;
-    text-align: center;
-}
-header img {
-    display: block;
-    margin: 0 auto;
-    border-radius: 20%;
-    width: 620px;
-    height: 350px;
-    padding: 20px;
+    width: 100%;
 }
 nav {
-    list-style: none;
+    list-style: none; /* Supprime les puces */
     display: block;
-    background-color: #051b7e;
-    margin: 10px 0;
+    padding: 15px 0;
     text-align: center;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.575);
 }
 nav a {
-    display : block;
+    display : block; 
     color: rgb(255, 255, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;  
+    font-size: 18px;
     margin: 0 15px;
     text-decoration: none;
+}
+a:hover {
+    text-decoration: none; /* Supprime le soulignement au survol */
+    color: #000000;
+    transform: scale(1.05); /* Agrandit légèrement le lien au survol */
+    transition: 0.2s; /* Animation douce */
 }
 nav li {
     display: inline-block;
     margin: 0 15px;
 }
+header {
+    padding: 8px 0;
+}
+#banner {
+    display: flex;
+    width: 100%;
+}
+#pp3 {
+    margin: 0;
+    border-radius: 3%;
+    width: 50%; 
+    margin: 30px;
+    opacity: 0;                  /* commence invisible */
+    animation: fadeIn 1s forwards; /* animation de fondu en entrée */
+}
+@keyframes fadeIn { /* définition de l'animation */
+    to {
+        opacity: 1; /* termine complètement visible */
+    }
+}
+#toppresentation {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+#toppresentation h1 {
+    color: #ffffff;
+    font-size: 70px;
+    margin: 0;
+    padding: 50px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombre pour améliorer la lisibilité */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#toppresentation p {
+    color: #ffffff;
+    text-align: center;
+    justify-content: center;
+    font-size: 20px;
+}
 #apropos {
-    background-color: #810b91;
+    display: block;
     color: #ffffff;
     font-size: 18px;
     padding: 20px;
     text-align: center;
 }
 #softskills {
-    background-color: #ffffff;
+    display: block;
     color: rgb(230, 11, 11);
     padding: 20px;
     text-align: center;
+}
+#codage, #bdd, #github, #projet {
+    width: 24px; /* Taille des icônes */
+    height: 24px;
+    vertical-align: middle; /* Aligne les icônes avec le texte */
+    margin-right: 10px; /* Espace entre l'icône et le texte */
 }
 #softskills ul {
     list-style: none;
@@ -59,7 +100,6 @@ nav li {
     list-style-position: inside; 
 }
 #technologies {
-    background-color: #87ceeb;
     color: #00008b;
     padding: 20px;
     text-align: center;
@@ -70,13 +110,11 @@ nav li {
     text-align: center;   
 }
 #realisations {
-    background-color: #f4f4f4a1;
     color: #a54a4a;
     padding: 20px;
     text-align: center;
 }
 #contact {
-    background-color: #f0ff2350;
     color: white;
     padding: 20px;
     text-align: center;
@@ -90,9 +128,6 @@ nav li {
   padding: 0;           
   text-align: center;   
 }
-h1 {
-    color: #00ac42;
-}
 h2 {
-    color: #000000;   
+    color: #ffffff;   
 }
