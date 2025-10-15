@@ -60,7 +60,7 @@ header {
 #topPresentation {
     display: flex;
     flex-direction: column;
-    background-color: #0f0064;
+    background-color: #0f0064cb;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.459);
     justify-content: center;
@@ -94,21 +94,25 @@ header {
     font-family: 'Times New Roman', Times, serif;
     padding-top: 50px;
 }
+#sections {
+    line-height: 1.5;
+}
 #aPropos {
     display: block;
     color: #ffffff;
-    background-color: #4d4094;
+    background-color: #4c4094b7;
+    font-size: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.459);
     margin: 50px;
-    margin-right: 40%;
-    padding: 20px;
+    padding: 50px;
     text-align: center;
 }
 #softSkills {
     display: block;
     color: rgb(255, 255, 255);
-    background-color: #4d4094;
+    background-color: #4c4094b7;
+    font-size: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.459);
     margin: 50px;
@@ -129,10 +133,11 @@ header {
 }
 #technologies {
     color: #ffffff;
+    font-size: 20px;
     margin: 50px;
     padding: 20px;
     margin-right: 40%;
-    background-color: #4d4094;
+    background-color: #4c4094b7;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.459);
     text-align: center;
@@ -144,7 +149,8 @@ header {
 }
 #realisations {
     color: #ffffff;
-    background-color: #4d4094;
+    background-color: #4c4094b7;
+    font-size: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.459);
     padding: 20px;
@@ -155,16 +161,40 @@ header {
 #contact {
     color: rgb(255, 255, 255);
     background-color: #767da5;
+    font-size: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(7, 0, 34, 0.459);
     margin: 50px;
-    padding: 20px;
+    padding: 15px;
     text-align: center;
 }
 #contact ul {
-  list-style: none;     
-  padding: 0;           
-  text-align: center;   
+    list-style: none;     
+    padding: 25px 0;           
+    text-align: center; 
+    justify-content: center;  
+    display: flex; /*pour qu'ils suivent l'alignement, donc ici horizontal, faut mettre flex direction si on veut les boutons en colonne */
+    gap: 20px;               /* espace entre les éléments */   
+}
+#contact ul li a{
+    text-decoration: none;          /* pas de soulignement */
+    color: white;                   /* texte blanc */
+    padding: 8px 20px;
+    border-radius: 25px;            /* coins arrondis */
+    font-weight: bold;
+    transition: all 0.3s ease;      /* animation douce au survol */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+#contact ul li a[href*="linkedin"] {
+    background-color: #0077b5;      /* bleu LinkedIn */
+}
+#contact ul li a[href*="github"] {
+    background-color: #333;          /* noir GitHub */
+}
+#contact ul li a:hover {
+    transform: scale(1.1);                  /* grossit légèrement */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5); /* ombre plus forte */
+    filter: brightness(1.2);                /* plus lumineux */
 }
 footer {
     background-color: #000000;
