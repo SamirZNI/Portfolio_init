@@ -78,15 +78,17 @@ header {
     font-weight: bold;
     text-transform: uppercase;
 }
-#topPresentation p {
+#topPresentation #p1 {
     color: #ffffff;
     text-align: center;
-    font-size: 25px;
+    font-size: 35px;
+    background-color: #000000a4;
+    border-radius: 8px;
     text-transform: uppercase;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     padding-top: 5px;
 }
-#topPresentation #p1 {
+#topPresentation #p2 {
     color: #ffffff;
     text-align: center;
     font-size: 25px;
@@ -161,6 +163,20 @@ header {
     list-style: none;     
     padding: 0;           
     text-align: center;   
+}
+#colonneTech {
+    display: flex;
+    justify-content: center; /* Centre les éléments horizontalement */
+}
+#colonneTech li {
+    margin: 10px; /* Espace autour de chaque élément de la liste */
+    display: flex; /* Utilise Flexbox pour aligner l'icône et le texte */
+}
+#technologies li img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 #realisations {
     color: #ffffff;
