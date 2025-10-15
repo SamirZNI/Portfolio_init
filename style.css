@@ -12,6 +12,7 @@ nav {
     display: block;
     padding: 15px 0; /* Ajoute de l'espace autour des liens */
     text-align: center;
+    background-color: #1a1e57;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.575);
 }
 nav a {
@@ -45,13 +46,13 @@ header {
 }
 #pp3 {
     border-radius: 3%;
-    width: 42%; 
+    width: 35%; 
     margin: 20px; /* Espace autour de l'image */
     opacity: 0;                  /* commence invisible */
     animation: fadeIn 1s forwards; /* animation de fondu en entrée */
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.459);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.459);
 }
-@keyframes fadeIn { /* définition de l'animation */
+@keyframes fadeIn { /* définition de l'animation */ 
     to {
         opacity: 1; /* termine complètement visible */
     }
@@ -64,12 +65,12 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.459);
     justify-content: center;
     padding: 20px;
-    width: 55%;
+    margin-right: 20px;
+    width: 65%;
 }
 #topPresentation h1 {
     color: #ffffff;
     font-size: 75px;
-    margin: 0;
     text-align: center;
     justify-content: top;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombre pour améliorer la lisibilité */
@@ -81,8 +82,17 @@ header {
     color: #ffffff;
     text-align: center;
     font-size: 25px;
+    text-transform: uppercase;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    padding: 0%;
+    padding-top: 5px;
+}
+#topPresentation #p1 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 25px;
+    text-transform: none;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 50px;
 }
 #aPropos {
     display: block;
@@ -90,8 +100,8 @@ header {
     background-color: #4d4094;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.459);
-    font-size: 18px;
     margin: 50px;
+    margin-right: 40%;
     padding: 20px;
     text-align: center;
 }
@@ -102,6 +112,7 @@ header {
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.459);
     margin: 50px;
+    margin-left: 40%;
     padding: 20px;
     text-align: center;
 }
@@ -120,6 +131,7 @@ header {
     color: #ffffff;
     margin: 50px;
     padding: 20px;
+    margin-right: 40%;
     background-color: #4d4094;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.459);
@@ -137,20 +149,17 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.459);
     padding: 20px;
     margin: 50px;
+    margin-left: 40%;
     text-align: center;
 }
 #contact {
-    color: white;
-    background-color: #4d4094;
+    color: rgb(255, 255, 255);
+    background-color: #767da5;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.459);
+    box-shadow: 0 4px 8px rgba(7, 0, 34, 0.459);
     margin: 50px;
     padding: 20px;
     text-align: center;
-}
-#contact form {
-    display: inline-block;
-    text-align: left;
 }
 #contact ul {
   list-style: none;     
@@ -164,5 +173,10 @@ footer {
     padding: 5px 0;
 }
 h2 {
-    color: #ffffff;   
+    color: #ffffff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 30px;
+    text-shadow: #000000 1px 1px 2px;   
 }
