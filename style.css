@@ -94,13 +94,20 @@ header {
     font-family: 'Times New Roman', Times, serif;
     padding-top: 50px;
 }
+#separateur { /*ligne de séparation blanche avec la page principal et les autres*/
+    height: 4px;
+    width: 70%;
+    margin: 0 auto; /* Centrer horizontalement */
+    justify-content: center;
+    background: linear-gradient(to right, rgba(0,0,0,0), rgb(199, 198, 255), rgba(255, 255, 255, 0));
+}
 #sections {
     line-height: 1.5;
 }
 #aPropos {
     display: block;
     color: #ffffff;
-    background-color: #4c4094b7;
+    background-color: #402ea8b7;
     font-size: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.459);
@@ -115,21 +122,29 @@ header {
     font-size: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.459);
-    margin: 50px;
+    margin: 10px;
     margin-left: 40%;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
 }
-#codage, #bdd, #github, #projet {
-    width: 24px; /* Taille des icônes */
-    height: 24px;
-    vertical-align: middle; /* Aligne les icônes avec le texte */
-    margin-right: 10px; /* Espace entre l'icône et le texte */
+#colonneSoft {
+    display: flex;
+    justify-content: center; /* Centre les éléments horizontalement */
+}
+#colonneSoft li {
+    margin: 10px; /* Espace autour de chaque élément de la liste */
+    display: flex; /* Utilise Flexbox pour aligner l'icône et le texte */
 }
 #softSkills ul {
     list-style: none;
     text-align: center;          
     list-style-position: inside; 
+}
+#softSkills li img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 #technologies {
     color: #ffffff;
@@ -207,6 +222,6 @@ h2 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 30px;
+    font-size: 40px;
     text-shadow: #000000 1px 1px 2px;   
 }
