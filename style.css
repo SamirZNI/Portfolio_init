@@ -62,7 +62,7 @@ header {
 #topPresentation {
     display: flex;
     flex-direction: column;
-    background-color: #291b77cb;
+    background-color: #1f1268cb;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.459);
     justify-content: center;
@@ -123,7 +123,7 @@ header {
 }
 #softskills1 {
     padding: 70px;
-    width: 30%;
+    width: 25%;
     border-radius: 10px;
     margin-left: 5%;
 }
@@ -135,7 +135,7 @@ header {
 #softSkillsContent {
     width: 55%;
     color: #ffffff;
-    background-color: #4c4094b7;
+    background-color: #402ea8b7;
     font-size: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.459);
@@ -170,16 +170,31 @@ header {
     vertical-align: middle; /* Aligne verticalement l'icône avec le texte */
     flex-direction: row;
 }
+#technologies1 {
+    padding: 70px;
+    width: 25%;
+}
 #technologies {
-    color: #ffffff;
-    font-size: 20px;
+    display: flex;
     margin: 50px;
     padding: 20px;
-    margin-right: 40%;
-    background-color: #4c4094b7;
+    text-align: center;
+    align-items: flex-start;
+}
+#technologiesContent {
+    width: 55%;
+    color: #ffffff;
+    background-color: #402ea8b7;
+    font-size: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.459);
+    margin: 50px;
+    padding: 50px;
     text-align: center;
+}
+#colonneTech {
+    display: flex;
+    justify-content: center; /* Centre les éléments horizontalement */
 }
 #technologies ul {
     list-style: none;     
@@ -202,18 +217,35 @@ header {
 }
 #realisations {
     color: #ffffff;
-    background-color: #4c4094b7;
     font-size: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.459);
     padding: 20px;
     margin: 50px;
     margin-left: 40%;
     text-align: center;
 }
+#realisations {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px; /* espace entre image et texte */
+    margin: 50px;
+}
+#realisations1 {
+    width: 25%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+#realisationsContent {
+    width: 65%; 
+    background-color: #402ea8b7;
+    color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.46);
+}
 #contact {
     color: rgb(255, 255, 255);
-    background-color: #767da5c4;
+    background-color: #6d76a8c4;
     font-size: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(7, 0, 34, 0.459);
