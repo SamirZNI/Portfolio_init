@@ -10,7 +10,7 @@ body {
 nav {
     list-style: none; /* Supprime les puces */
     display: block;
-    padding: 15px 0;
+    padding: 15px 0; /* Ajoute de l'espace autour des liens */
     text-align: center;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.575);
 }
@@ -20,7 +20,7 @@ nav a {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;  
     font-size: 18px;
-    margin: 0 15px;
+    margin: 0 15px; /* Espace entre les liens */
     text-decoration: none;
 }
 a:hover {
@@ -34,55 +34,63 @@ nav li {
     margin: 0 15px;
 }
 header {
-    padding: 8px 0;
+    padding: 8px 0; /* Ajoute de l'espace autour du texte */
 }
 #banner {
     display: flex;
+    height: 100vh; /* Hauteur de la bannière */
+
     width: 100%;
 }
 #pp3 {
-    margin: 0;
     border-radius: 3%;
-    width: 50%; 
-    margin: 30px;
+    width: 42%; 
+    margin: 20px; /* Espace autour de l'image */
     opacity: 0;                  /* commence invisible */
     animation: fadeIn 1s forwards; /* animation de fondu en entrée */
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.459);
 }
 @keyframes fadeIn { /* définition de l'animation */
     to {
         opacity: 1; /* termine complètement visible */
     }
 }
-#toppresentation {
+#topPresentation {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    background-color: #0f0064;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.459);
+    justify-content: center;
+    padding: 20px;
+    width: 55%;
 }
-#toppresentation h1 {
+#topPresentation h1 {
     color: #ffffff;
-    font-size: 70px;
+    font-size: 75px;
     margin: 0;
-    padding: 50px;
     text-align: center;
+    justify-content: top;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombre pour améliorer la lisibilité */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
     text-transform: uppercase;
 }
-#toppresentation p {
+#topPresentation p {
     color: #ffffff;
     text-align: center;
-    justify-content: center;
-    font-size: 20px;
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 0%;
 }
-#apropos {
+#aPropos {
     display: block;
     color: #ffffff;
     font-size: 18px;
     padding: 20px;
     text-align: center;
 }
-#softskills {
+#softSkills {
     display: block;
     color: rgb(230, 11, 11);
     padding: 20px;
@@ -94,7 +102,7 @@ header {
     vertical-align: middle; /* Aligne les icônes avec le texte */
     margin-right: 10px; /* Espace entre l'icône et le texte */
 }
-#softskills ul {
+#softSkills ul {
     list-style: none;
     text-align: center;          
     list-style-position: inside; 
