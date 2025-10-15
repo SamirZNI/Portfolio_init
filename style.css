@@ -39,7 +39,8 @@ header {
 #banner {
     display: flex;
     height: 100vh; /* Hauteur de la bannière */
-
+    align-items: center; /* Centre verticalement le contenu */
+    justify-content: center; /* Centre horizontalement le contenu */
     width: 100%;
 }
 #pp3 {
@@ -86,13 +87,21 @@ header {
 #aPropos {
     display: block;
     color: #ffffff;
+    background-color: #4d4094;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.459);
     font-size: 18px;
+    margin: 50px;
     padding: 20px;
     text-align: center;
 }
 #softSkills {
     display: block;
-    color: rgb(230, 11, 11);
+    color: rgb(255, 255, 255);
+    background-color: #4d4094;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.459);
+    margin: 50px;
     padding: 20px;
     text-align: center;
 }
@@ -108,8 +117,12 @@ header {
     list-style-position: inside; 
 }
 #technologies {
-    color: #00008b;
+    color: #ffffff;
+    margin: 50px;
     padding: 20px;
+    background-color: #4d4094;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.459);
     text-align: center;
 }
 #technologies ul {
@@ -118,12 +131,20 @@ header {
     text-align: center;   
 }
 #realisations {
-    color: #a54a4a;
+    color: #ffffff;
+    background-color: #4d4094;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.459);
     padding: 20px;
+    margin: 50px;
     text-align: center;
 }
 #contact {
     color: white;
+    background-color: #4d4094;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.459);
+    margin: 50px;
     padding: 20px;
     text-align: center;
 }
@@ -135,6 +156,12 @@ header {
   list-style: none;     
   padding: 0;           
   text-align: center;   
+}
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 5px 0;
 }
 h2 {
     color: #ffffff;   
