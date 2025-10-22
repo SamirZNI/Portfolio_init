@@ -1,5 +1,5 @@
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 body {
     background-image: url(Asset/background3.jpg);
@@ -85,7 +85,7 @@ header {
 #topPresentation #p1 {
     color: #ffffff;
     text-align: center;
-    font-size: 35px;
+    font-size: 45px;
     background-color: #000000a4;
     border-radius: 8px;
     text-transform: uppercase;
@@ -95,7 +95,7 @@ header {
 #topPresentation #p2 {
     color: #ffffff;
     text-align: center;
-    font-size: 25px;
+    font-size: 40px;
     text-transform: none;
     font-family: 'Times New Roman', Times, serif;
     padding-top: 50px;
@@ -166,7 +166,6 @@ header {
 }
 #sosftSkills img #softskills1 {
     margin-right: 10px; /* Espace entre l'icône et le texte */
-    display: block;
     vertical-align: middle; /* Aligne verticalement l'icône avec le texte */
     flex-direction: row;
 }
@@ -280,6 +279,18 @@ header {
     transform: scale(1.1);                  /* grossit légèrement */
     box-shadow: 0 6px 20px rgba(0,0,0,0.5); /* ombre plus forte */
     filter: brightness(1.2);                /* plus lumineux */
+}
+#cvImage {
+    width: 90px;
+    height: 90px;
+}
+#CV h3 {
+    color: #ffffff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 30px;
+    text-shadow: #000000 1px 1px 2px;   
 }
 footer {
     background-color: #000000;
