@@ -9,23 +9,29 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
+    margin-top: 30px; /* Pour éviter que le contenu soit caché derrière la nav fixe */
 }
 nav {
     list-style: none; /* Supprime les puces */
-    display: block;
+    display: flex;
+    justify-content: center;
     padding: 15px 0; /* Ajoute de l'espace autour des liens */
-    text-align: center;
     background-color: #1a1e57;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.575);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Pour qu’il reste au-dessus du reste du contenu */
+    z-index: 1000;
 }
 nav a {
-    display : block; 
     color: rgb(255, 255, 255);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;  
     font-size: 18px;
     margin: 0 15px; /* Espace entre les liens */
-    text-decoration: none;
+    text-decoration: none; /* Supprime le soulignement */
 }
 a:hover {
     text-decoration: none; /* Supprime le soulignement au survol */
@@ -49,8 +55,8 @@ header {
 }
 #pp3 {
     border-radius: 3%;
-    width: 35%; 
-    margin: 20px; /* Espace autour de l'image */
+    width: 25%; 
+    margin: 42px; /* Espace autour de l'image */
     opacity: 0;                  /* commence invisible */
     animation: fadeIn 1s forwards; /* animation de fondu en entrée */
 }
@@ -62,40 +68,39 @@ header {
 #topPresentation {
     display: flex;
     flex-direction: column;
-    background-color: #1f1268cb;
+    background-color: #1f1268;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.459);
     justify-content: center;
-    padding: 20px;
+    padding: 0px;
     margin-right: 20px;
-    width: 100%;
+    width: 65%;
     opacity: 0;                  /* commence invisible */
     animation: fadeIn 1.5s forwards; /* animation de fondu en entrée */
 }
 #topPresentation h1 {
-    color: #ffffff;
+    color: #d0d8ff;
     font-size: 75px;
     text-align: center;
     justify-content: top;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombre pour améliorer la lisibilité */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
-    text-transform: uppercase;
 }
 #topPresentation #p1 {
-    color: #ffffff;
-    text-align: center;
-    font-size: 45px;
-    background-color: #000000a4;
-    border-radius: 8px;
-    text-transform: uppercase;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    padding-top: 5px;
-}
-#topPresentation #p2 {
-    color: #ffffff;
+    color: #d0d8ff;
     text-align: center;
     font-size: 40px;
+    background-color: #000000a4;
+    margin: 65px;
+    padding: 20px;
+    border-radius: 8px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#topPresentation #p2 {
+    color: #d0d8ff;
+    text-align: center;
+    font-size: 32px;
     text-transform: none;
     font-family: 'Times New Roman', Times, serif;
     padding-top: 50px;
@@ -112,18 +117,19 @@ header {
 }
 #aPropos {
     display: block;
-    color: #ffffff;
+    color: #d0d8ff;
     background-color: #402ea8b7;
     font-size: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.459);
     margin: 50px;
-    padding: 50px;
+    padding: 40px;
     text-align: center;
 }
 #softskills1 {
-    padding: 70px;
-    width: 25%;
+    padding-top: 90px;
+    width: 27%;
+    justify-content: center;
     border-radius: 10px;
     margin-left: 5%;
 }
@@ -133,8 +139,8 @@ header {
     align-items: flex-start;
 }
 #softSkillsContent {
-    width: 55%;
-    color: #ffffff;
+    width: 75%;
+    color: #d0d8ff;
     background-color: #402ea8b7;
     font-size: 20px;
     border-radius: 15px;
@@ -163,6 +169,7 @@ header {
     height: 50px;
     object-fit: cover;
     border-radius: 10px;
+    margin-right: 10px; /* Espace entre l'icône et le texte */
 }
 #sosftSkills img #softskills1 {
     margin-right: 10px; /* Espace entre l'icône et le texte */
@@ -170,24 +177,25 @@ header {
     flex-direction: row;
 }
 #technologies1 {
-    padding: 70px;
-    width: 25%;
+    padding-top: 70px;
+    margin: 20px;
+    width: 23%;
 }
 #technologies {
     display: flex;
-    margin: 50px;
     padding: 20px;
+    margin: 18px;
     text-align: center;
     align-items: flex-start;
 }
 #technologiesContent {
-    width: 55%;
-    color: #ffffff;
+    width: 65%;
+    color: #d0d8ff;
     background-color: #402ea8b7;
     font-size: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.459);
-    margin: 50px;
+    margin: 20px;
     padding: 50px;
     text-align: center;
 }
@@ -202,7 +210,6 @@ header {
 }
 #colonneTech {
     display: flex;
-    justify-content: center; /* Centre les éléments horizontalement */
 }
 #colonneTech li {
     margin: 10px; /* Espace autour de chaque élément de la liste */
@@ -211,22 +218,20 @@ header {
 #technologies li img {
     width: 50px;
     height: 50px;
-    object-fit: cover;
-    border-radius: 10px;
+    margin-right: 11px; /* Espace entre l'icône et le texte */
 }
 #realisations {
-    color: #ffffff;
+    color: #d0d8ff;
     font-size: 20px;
     padding: 20px;
-    margin: 50px;
-    margin-left: 40%;
+    margin: 30px;
     text-align: center;
 }
 #realisations {
     display: flex;
     align-items: flex-start;
     gap: 40px; /* espace entre image et texte */
-    margin: 50px;
+    margin: 30px;
 }
 #realisations1 {
     width: 25%;
@@ -235,15 +240,15 @@ header {
     object-fit: cover;
 }
 #realisationsContent {
-    width: 65%; 
+    width: 75%; 
     background-color: #402ea8b7;
-    color: #ffffff;
+    color: #d0d8ff;
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.46);
 }
 #contact {
-    color: rgb(255, 255, 255);
+    color: #d0d8ff;
     background-color: #6d76a8c4;
     font-size: 20px;
     border-radius: 15px;
@@ -262,7 +267,7 @@ header {
 }
 #contact ul li a{
     text-decoration: none;          /* pas de soulignement */
-    color: white;                   /* texte blanc */
+    color: #d0d8ff;                   /* texte blanc */
     padding: 8px 20px;
     border-radius: 25px;            /* coins arrondis */
     font-weight: bold;
@@ -285,24 +290,22 @@ header {
     height: 90px;
 }
 #CV h3 {
-    color: #ffffff;
+    color: #d0d8ff;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
-    text-transform: uppercase;
     font-size: 30px;
     text-shadow: #000000 1px 1px 2px;   
 }
 footer {
     background-color: #000000;
-    color: #ffffff;
+    color: #d0d8ff;
     text-align: center;
-    padding: 5px 0;
+    padding: 1px ;
 }
 h2 {
-    color: #ffffff;
+    color: #d0d8ff;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
-    text-transform: uppercase;
     font-size: 40px;
     text-shadow: #000000 1px 1px 2px;   
 }
