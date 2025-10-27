@@ -35,7 +35,8 @@ nav a {
 }
 a:hover {
     text-decoration: none; /* Supprime le soulignement au survol */
-    color: #000000;
+    color: #71729e;
+    text-shadow: 1px 1px 0px #000000;
     transform: scale(1.05); /* Agrandit légèrement le lien au survol */
     transition: 0.2s; /* Animation douce */
 }
