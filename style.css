@@ -3,6 +3,8 @@ html {
 }
 body {
     background-image: url(Asset/background3.jpg);
+    background-color: #5642c7;
+    background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     font-family: Arial, sans-serif;
@@ -14,7 +16,7 @@ nav {
     list-style: none; /* Supprime les puces */
     display: flex;
     justify-content: center;
-    background-color: #1a1e57;
+    background-color: #1d1152;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.575);
     position: fixed;
     top: 0;
@@ -39,7 +41,7 @@ nav a {
     color: rgb(255, 255, 255);
     font-family: 'berlin sans fb demi', sans-serif;
     font-weight: bold;
-    text-shadow: #000000 2px 2px 2px;
+    text-shadow: #000000 1px 1px 2px;
     font-size: 16px;
     margin: 0 15px; /* Espace entre les liens */
     text-decoration: none; /* Supprime le soulignement */
@@ -121,7 +123,7 @@ header {
 #topPresentation {
     display: flex;
     flex-direction: column;
-    background-color: #1f1268;
+    background-color: #34258b;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.459);
     justify-content: center;
@@ -145,7 +147,7 @@ header {
     color: #d0d8ff;
     text-align: center;
     font-size: 40px;
-    background-color: #140953;
+    background-color: #251968;
     margin: 65px;
     padding: 10px;
     border-radius: 8px;
@@ -179,179 +181,181 @@ header {
     margin: 50px;
     padding: 40px;
     text-align: center;
+    opacity: 0;
+    transform: scale(0.9) translateY(40px);
+    animation: zoomInSmooth 1s ease-out both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
-#softskills1 {
-    padding-top: 90px;
-    width: 27%;
-    justify-content: center;
-    border-radius: 10px;
-    margin-left: 5%;
+/* Animation */
+@keyframes zoomInSmooth {
+  from {
+    opacity: 0;
+    transform: scale(0.7) translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
-#softSkills {
+#competences {
     display: flex;
-    text-align: center;
-    align-items: flex-start;
-}
-#softSkillsContent {
-    width: 75%;
-    color: #d0d8ff;
-    background-color: #402ea8b7;
-    font-size: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.459);
-    margin: 50px;
-    padding: 50px;
-    text-align: center;
-    align-items: flex-start;
-    
-}
-#colonneSoft {
-    display: flex;
-    justify-content: center; /* Centre les éléments horizontalement */
-}
-#colonneSoft li {
-    margin: 10px; /* Espace autour de chaque élément de la liste */
-    display: flex; /* Utilise Flexbox pour aligner l'icône et le texte */
-}
-#softSkills ul {
-    list-style: none;
-    text-align: center;          
-    list-style-position: inside; 
-}
-#softSkills li img {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-right: 10px; /* Espace entre l'icône et le texte */
-}
-#sosftSkills img #softskills1 {
-    margin-right: 10px; /* Espace entre l'icône et le texte */
-    vertical-align: middle; /* Aligne verticalement l'icône avec le texte */
-    flex-direction: row;
-}
-#technologies1 {
-    padding-top: 70px;
-    margin: 20px;
-    width: 23%;
-}
-#technologies {
-    display: flex;
-    padding: 20px;
-    margin: 18px;
-    text-align: center;
-    align-items: flex-start;
-}
-#technologiesContent {
-    width: 65%;
-    color: #d0d8ff;
-    background-color: #402ea8b7;
-    font-size: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.459);
-    margin: 20px;
-    padding: 50px;
-    text-align: center;
-}
-#colonneTech {
-    display: flex;
-    justify-content: center; /* Centre les éléments horizontalement */
-}
-#technologies ul {
-    list-style: none;     
-    padding: 0;           
-    text-align: center;   
-}
-#colonneTech {
-    display: flex;
-}
-#colonneTech li {
-    margin: 10px; /* Espace autour de chaque élément de la liste */
-    display: flex; /* Utilise Flexbox pour aligner l'icône et le texte */
-}
-#technologies li img {
-    width: 50px;
-    height: 50px;
-    margin-right: 11px; /* Espace entre l'icône et le texte */
-}
-#realisations {
-    color: #d0d8ff;
-    font-size: 20px;
-    padding: 20px;
-    margin: 30px;
-    text-align: center;
-}
-#realisations {
-    display: flex;
-    align-items: flex-start;
-    gap: 40px; /* espace entre image et texte */
-    margin: 30px;
-}
-#realisations1 {
-    width: 25%;
-    height: auto;
-    border-radius: 10px;
-    object-fit: cover;
-}
-#realisationsContent {
-    width: 75%; 
-    background-color: #402ea8b7;
-    color: #d0d8ff;
+    gap: 20px;              /* espace entre les colonnes */
     padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.46);
+    justify-content: space-between;
+    align-items: stretch;
 }
+/* Chaque section à l’intérieur prend la même largeur */
+#softSkills,
+#technologies,
+#realisations {
+    flex: 1;                  /* largeur égale */
+    background-color: #402ea8b7;
+    color: #d0d8ff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.45);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    /* Animation douce */
+    opacity: 0;
+    transform: scale(0.95) translateY(40px);
+    animation: zoomInSmooth 1s ease-out both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+/* Colonnes internes pour listes (Soft Skills et Technologies) */
+#colonneSoft,
+#colonneTech {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Listes internes */
+#colonneSoft ul,
+#colonneTech ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+#colonneSoft li,
+#colonneTech li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#colonneSoft li img,
+#colonneTech li img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+/* Image flottante au-dessus du bloc */
+#softskills1,
+#technologies1,
+#realisations1 {
+    position: absolute;
+    top: -50px;           /* sort au-dessus du bloc */
+    left: 50%;            /* centre horizontalement */
+    transform: translateX(-50%); /* centre parfaitement */
+    width: 40%;        /* taille adaptée */
+}
+#softSkillsContent,
+#technologiesContent,
+#realisationsContent {
+    padding-top: 60px; 
+    font-size: 19px;
+}
+/* Animation douce */
+@keyframes zoomInSmooth {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
 #contact {
     color: #d0d8ff;
-    background-color: #6d76a8c4;
+    background-color: #27257cd5;
     font-size: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(7, 0, 34, 0.459);
     margin: 50px;
-    padding: 15px;
-    text-align: center;
+    padding: 30px;
 }
+
+#contactContainer {
+    display: flex;
+    gap: 40px;               /* espace entre les colonnes */
+    justify-content: center;  /* centre les colonnes horizontalement */
+    align-items: flex-start;
+    max-width: 900px;         /* largeur maximale du conteneur */
+    margin: 0 auto;           /* centre le conteneur dans le bloc bleu */
+}
+
+/* Colonne gauche et droite prennent environ la même largeur */
+#contactInfo, #contactCV {
+    flex: 1;
+    max-width: 400px;         /* limite la largeur de chaque colonne */
+}
+
+/* Liste des liens */
 #contact ul {
     list-style: none;     
     padding: 25px 0;           
-    text-align: center; 
-    justify-content: center;  
-    display: flex; /*pour qu'ils suivent l'alignement, donc ici horizontal, faut mettre flex direction si on veut les boutons en colonne */
-    gap: 20px;               /* espace entre les éléments */   
+    display: flex;
+    gap: 20px;
 }
+
+/* Boutons LinkedIn / GitHub */
 #contact ul li a{
-    text-decoration: none;          /* pas de soulignement */
-    color: #d0d8ff;                   /* texte blanc */
+    text-decoration: none;
+    color: #d0d8ff;
     padding: 8px 20px;
-    border-radius: 25px;            /* coins arrondis */
+    border-radius: 25px;
     font-weight: bold;
-    transition: all 0.3s ease;      /* animation douce au survol */
+    transition: all 0.3s ease;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 #contact ul li a[href*="linkedin"] {
-    background-color: #0077b5;      /* bleu LinkedIn */
+    background-color: #0077b5;
 }
 #contact ul li a[href*="github"] {
-    background-color: #333;          /* noir GitHub */
+    background-color: #333;
 }
 #contact ul li a:hover {
-    transform: scale(1.1);                  /* grossit légèrement */
-    box-shadow: 0 6px 20px rgba(0,0,0,0.5); /* ombre plus forte */
-    filter: brightness(1.2);                /* plus lumineux */
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+    filter: brightness(1.2);
 }
 #cvImage {
     width: 90px;
     height: 90px;
+    display: block;
+    margin: 10px auto;
 }
 #CV h3 {
     color: #d0d8ff;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
     font-size: 30px;
-    text-shadow: #000000 1px 1px 2px;   
+    text-shadow: #000000 1px 1px 2px; 
+    text-align: center;
 }
 footer {
-    background-color: #000000;
+    background-color: #0b0836;
     color: #d0d8ff;
     text-align: center;
     padding: 1px ;
