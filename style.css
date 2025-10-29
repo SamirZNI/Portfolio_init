@@ -46,7 +46,7 @@ nav a {
     margin: 0 15px; /* Espace entre les liens */
     text-decoration: none; /* Supprime le soulignement */
 }
-a:hover {
+a:hover { /* Effet au survol du menu (passe la souris dessus) */
     text-decoration: none; /* Supprime le soulignement au survol */
     color: #ffffff;
     text-shadow: 1px 1px 2px #000000;
@@ -123,7 +123,7 @@ header {
 #topPresentation {
     display: flex;
     flex-direction: column;
-    background-color: #34258b;
+    background-color: #1b1055;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.459);
     justify-content: center;
@@ -209,11 +209,11 @@ header {
 #softSkills,
 #technologies,
 #realisations {
-    flex: 1;                  /* largeur égale */
+    position: relative; /* sur chaque section, les images flottantes sont centrées par rapport au bloc (pour positionner l’image flottante) */
     background-color: #402ea8b7;
     color: #d0d8ff;
     border-radius: 15px;
-    padding: 30px;
+    padding: 50px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.45);
     display: flex;
     flex-direction: column;
@@ -221,10 +221,21 @@ header {
     text-align: center;
     /* Animation douce */
     opacity: 0;
-    transform: scale(0.95) translateY(40px);
-    animation: zoomInSmooth 1s ease-out both;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
+    transform: scale(0.95) translateY(40px); /* position et taille de départ, 0.95 c'est l'élément est à 95% de sa taille et translateY(40px), il est déplacé vers le bas de 40 px. */
+    animation: zoomInSmooth 4s ease-out both;  /* l'élément commence vite et finit doucement en 1 seconde */
+    animation-timeline: view(); /* l'animation se déclenche au fur et à mesure que l’élément entre dans le champ de vision.*/
+    animation-range: entry 0% cover 50%; /* l'animation commence dès que l’élément commence à entrer dans le champ de vision (entry 0%) et se termine lorsque 50% de l’élément est visible (cover 50%) */
+}
+/* Animation douce */
+@keyframes zoomInSmooth {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
 }
 /* Colonnes internes pour listes (Soft Skills et Technologies) */
 #colonneSoft,
@@ -263,27 +274,20 @@ header {
 #technologies1,
 #realisations1 {
     position: absolute;
-    top: -50px;           /* sort au-dessus du bloc */
+    top: -60px;           /* sort au-dessus du bloc */
     left: 50%;            /* centre horizontalement */
-    transform: translateX(-50%); /* centre parfaitement */
-    width: 40%;        /* taille adaptée */
+    transform: translateX(-50%); /* centre parfaitement, ici déplace l'image vers la gauche de 50% de sa propre largeur */
+    width: 42%;        /* taille adaptée */
+}
+#realisations1 {
+    width: 35%;       
+    border-radius: 25px;
 }
 #softSkillsContent,
 #technologiesContent,
 #realisationsContent {
     padding-top: 60px; 
     font-size: 19px;
-}
-/* Animation douce */
-@keyframes zoomInSmooth {
-    from {
-        opacity: 0;
-        transform: scale(0.95) translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-    }
 }
 
 #contact {
@@ -296,31 +300,27 @@ header {
     padding: 30px;
 }
 
+/* Conteneur interne : 2 colonnes centrées */
 #contactContainer {
     display: flex;
-    gap: 40px;               /* espace entre les colonnes */
+    gap: 100px;               /* espace entre les colonnes */
     justify-content: center;  /* centre les colonnes horizontalement */
     align-items: flex-start;
-    max-width: 900px;         /* largeur maximale du conteneur */
+    max-width: 80%;         /* largeur maximale du conteneur */
     margin: 0 auto;           /* centre le conteneur dans le bloc bleu */
-}
-
-/* Colonne gauche et droite prennent environ la même largeur */
-#contactInfo, #contactCV {
-    flex: 1;
-    max-width: 400px;         /* limite la largeur de chaque colonne */
 }
 
 /* Liste des liens */
 #contact ul {
-    list-style: none;     
+    list-style: none; 
     padding: 25px 0;           
     display: flex;
+    justify-content: center;   /* centre les boutons horizontalement */
     gap: 20px;
 }
 
 /* Boutons LinkedIn / GitHub */
-#contact ul li a{
+#contact ul li a {
     text-decoration: none;
     color: #d0d8ff;
     padding: 8px 20px;
@@ -339,6 +339,7 @@ header {
     transform: scale(1.1);
     box-shadow: 0 6px 20px rgba(0,0,0,0.5);
     filter: brightness(1.2);
+    transition: all 0.3s ease;
 }
 #cvImage {
     width: 90px;
@@ -346,11 +347,28 @@ header {
     display: block;
     margin: 10px auto;
 }
-#CV h3 {
+#cvImage:hover {
+    transform: scale(1.07);
+    filter: brightness(1.1);
+    transition: all 0.3s ease;
+}
+#contactCV h3 {
     color: #d0d8ff;
+    background-color: #2f1c9e8a;
+    border-radius: 8px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 40px;
+    text-shadow: #000000 1px 1px 2px; 
+    text-align: center;
+}
+#contactInfo h2 {
+    color: #d0d8ff;
+    background-color: #2f1c9e8a;
+    border-radius: 8px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 40px;
     text-shadow: #000000 1px 1px 2px; 
     text-align: center;
 }
@@ -360,6 +378,10 @@ footer {
     text-align: center;
     padding: 1px ;
 }
+
+
+
+
 h2 {
     color: #d0d8ff;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
