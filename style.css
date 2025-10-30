@@ -135,7 +135,7 @@ header {
     animation: fadeIn 1.5s forwards; /* animation de fondu en entrée */
 }
 #topPresentation h1 {
-    color: #d0d8ff;
+    color: #e2e7ff;
     font-size: 75px;
     text-align: center;
     justify-content: top;
@@ -154,7 +154,7 @@ header {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 #topPresentation #p2 {
-    color: #d0d8ff;
+    color: #e2e7ff;
     text-align: center;
     font-size: 32px;
     text-transform: none;
@@ -173,19 +173,32 @@ header {
 }
 #aPropos {
     display: block;
-    color: #d0d8ff;
+    color: #e2e7ff;
     background-color: #402ea8b7;
+    line-height: 1.72;
     font-size: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.459);
     margin: 50px;
     padding: 40px;
     text-align: center;
+    justify-content: center;
     opacity: 0;
     transform: scale(0.9) translateY(40px);
     animation: zoomInSmooth 1s ease-out both;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
+}
+#aPropos h2 {
+    background-color: #301c9e;
+    border-radius: 8px;
+    box-shadow: #000000 1px 1px 2px;
+    padding: 5px 100px;
+    display: inline-block; /* Pour que le fond ne prenne que la largeur du texte */
+}
+#aPropos p {
+    text-align: justify; /* bien carré, aligné à gauche et à droite */
+    text-align-last: center; /* dernière ligne centrée */
 }
 /* Animation */
 @keyframes zoomInSmooth {
@@ -211,7 +224,7 @@ header {
 #realisations {
     position: relative; /* sur chaque section, les images flottantes sont centrées par rapport au bloc (pour positionner l’image flottante) */
     background-color: #402ea8b7;
-    color: #d0d8ff;
+    color: #e2e7ff;
     border-radius: 15px;
     padding: 50px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.45);
@@ -219,9 +232,10 @@ header {
     flex-direction: column;
     justify-content: flex-start;
     text-align: center;
+    width: 32%;        
     /* Animation douce */
     opacity: 0;
-    transform: scale(0.95) translateY(40px); /* position et taille de départ, 0.95 c'est l'élément est à 95% de sa taille et translateY(40px), il est déplacé vers le bas de 40 px. */
+    transform: scale(0.85) translateY(40px); /* position et taille de départ, 0.85 c'est : l'élément est à 85% de sa taille à l'apparition puis devient taille normal au fur et à mesure en plein centre de l'écran, et translateY(40px), il est déplacé vers le bas de 40 px. */
     animation: zoomInSmooth 4s ease-out both;  /* l'élément commence vite et finit doucement en 1 seconde */
     animation-timeline: view(); /* l'animation se déclenche au fur et à mesure que l’élément entre dans le champ de vision.*/
     animation-range: entry 0% cover 50%; /* l'animation commence dès que l’élément commence à entrer dans le champ de vision (entry 0%) et se termine lorsque 50% de l’élément est visible (cover 50%) */
@@ -230,7 +244,7 @@ header {
 @keyframes zoomInSmooth {
     from {
         opacity: 0;
-        transform: scale(0.95) translateY(40px);
+        transform: scale(0.85) translateY(40px); 
     }
     to {
         opacity: 1;
@@ -291,7 +305,8 @@ header {
 }
 
 #contact {
-    color: #d0d8ff;
+    color: #e2e7ff;
+    justify-content: center;
     background-color: #27257cd5;
     font-size: 20px;
     border-radius: 15px;
@@ -322,7 +337,7 @@ header {
 /* Boutons LinkedIn / GitHub */
 #contact ul li a {
     text-decoration: none;
-    color: #d0d8ff;
+    color: #e2e7ff;
     padding: 8px 20px;
     border-radius: 25px;
     font-weight: bold;
@@ -353,7 +368,7 @@ header {
     transition: all 0.3s ease;
 }
 #contactCV h3 {
-    color: #d0d8ff;
+    color: #e2e7ff;
     background-color: #2f1c9e8a;
     border-radius: 8px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -363,7 +378,7 @@ header {
     text-align: center;
 }
 #contactInfo h2 {
-    color: #d0d8ff;
+    color: #e2e7ff;
     background-color: #2f1c9e8a;
     border-radius: 8px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -374,7 +389,7 @@ header {
 }
 footer {
     background-color: #0b0836;
-    color: #d0d8ff;
+    color: #e2e7ff;
     text-align: center;
     padding: 1px ;
 }
@@ -383,7 +398,7 @@ footer {
 
 
 h2 {
-    color: #d0d8ff;
+    color: #e2e7ff;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
     font-size: 40px;
