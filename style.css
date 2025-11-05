@@ -17,7 +17,7 @@ nav {
     display: flex;
     justify-content: center;
     background-color: #1d1152;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.575);
+    box-shadow: 0 6px 5px rgba(0, 0, 0, 0.575);
     position: fixed;
     top: 0;
     left: 0;
